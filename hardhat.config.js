@@ -85,6 +85,17 @@ module.exports = {
       timeout: 20000,
 
     },
+
+    avax_cchain: {
+      url: process.env.AVAX_CCHAIN_URL || "",
+      chainId: 43114,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      //gas: 2518637,  // Set the Max Limit, can change based on the need
+      //gasPrice: 95000000000,
+      timeout: 20000,
+
+    },
     
   },
   gasReporter: {
